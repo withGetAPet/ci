@@ -53,7 +53,7 @@ RUN npm install -g pnpm
 # Install Rust
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --profile minimal --default-toolchain=$RUST_VERSION
 
-    # Install Rust tools
+# Install Rust tools
 RUN rustup update && \
     rustup component add clippy rustfmt llvm-tools-preview
 
