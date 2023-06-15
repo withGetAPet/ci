@@ -35,8 +35,8 @@ RUN apt-get install -y --no-install-recommends \
     # Compile protobuf v23.3
 RUN git clone https://github.com/protocolbuffers/protobuf.git -b v23.3 /tmp/protobuf --depth 1 --recurse-submodules
 RUN mkdir /tmp/protobuf/build
-RUN cd /tmp/protobuf
-RUN cmake -Dprotobuf_BUILD_TESTS=OFF -DCMAKE_BUILD_TYPE=Release ..
+RUN cd /tmp/protobuf/build
+RUN cmake -Dprotobuf_BUILD_TESTS=OFF -DCMAKE_BUILD_TYPE=Release .
 RUN cmake --build . --target install -j $(nproc) --config Release
 RUN ldconfig
 RUN cd -
