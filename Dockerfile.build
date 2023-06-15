@@ -35,8 +35,8 @@ RUN <<eot
             cmake \
             clang-format
 
-    # Compile protobuf v22.2
-    git clone https://github.com/protocolbuffers/protobuf.git -b v22.2 /tmp/protobuf --depth 1 --recurse-submodules
+    # Compile protobuf v23.3
+    git clone https://github.com/protocolbuffers/protobuf.git -b v23.3 /tmp/protobuf --depth 1 --recurse-submodules
     mkdir /tmp/protobuf/build
     cd /tmp/protobuf/build
     cmake -Dprotobuf_BUILD_TESTS=OFF -DCMAKE_BUILD_TYPE=Release ..
@@ -44,7 +44,6 @@ RUN <<eot
     ldconfig
     cd -
     rm -rf /tmp/protobuf
-
 
     curl -sL https://deb.nodesource.com/setup_18.x | bash -
     apt-get update
