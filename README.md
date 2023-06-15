@@ -1,2 +1,3 @@
-# ci
-Repo for storing pre-built binaries used by CI
+# CI
+
+This repository contains the Docker image used to build our other repositories.
