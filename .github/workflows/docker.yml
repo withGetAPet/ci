@@ -51,5 +51,5 @@ jobs:
           file: ./${{ matrix.file }}
           push: true
           tags: |
-            ghcr.io/withGetAPet/${{ matrix.name }}:${{ github.sha }}
-            ghcr.io/withGetAPet/${{ matrix.name }}:latest
+            ghcr.io/withgetapet/${{ matrix.name }}:${{ github.sha }}
+            ghcr.io/withgetapet/${{ matrix.name }}:latest
