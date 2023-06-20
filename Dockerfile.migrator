@@ -1,4 +1,4 @@
-FROM rust:alpine as builder
+FROM rust:1.70.0-alpine3.18 as builder
 
 LABEL org.opencontainers.image.source=https://github.com/withGetAPet/ci
 LABEL org.opencontainers.image.description="Migrator for GetAPet"
@@ -6,7 +6,7 @@ LABEL org.opencontainers.image.description="Migrator for GetAPet"
 RUN apk add --no-cache musl-dev openssl-dev perl make && \
     cargo install --git https://github.com/launchbadge/sqlx sqlx-cli --features openssl-vendored
 
-FROM alpine:latest
+FROM alpine:3.18.2
 
 COPY --from=builder /usr/local/cargo/bin/sqlx /usr/local/bin/sqlx
 
