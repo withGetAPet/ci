@@ -8,15 +8,31 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    reviewers:
+      - cruex-de
+    assignees:
+      - cruex-de
+    commit-message:
+      prefix: fix
+      prefix-development: chore
+      include: scope
     target-branch: "main"
     labels:
       - "dependencies"
 
-  # Maintain dependencies for Docker
+  # Maintain dependencies for docker
   - package-ecosystem: "docker"
-    directory: "/"
+    directory: "/docker"
     schedule:
       interval: "daily"
+    reviewers:
+      - cruex-de
+    assignees:
+      - cruex-de
+    commit-message:
+      prefix: fix
+      prefix-development: chore
+      include: scope
     target-branch: "main"
     labels:
       - "dependencies"

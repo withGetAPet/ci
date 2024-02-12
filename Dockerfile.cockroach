@@ -1,6 +1,0 @@
-FROM cockroachdb/cockroach:v23.1.5
-
-LABEL org.opencontainers.image.source=https://github.com/withGetAPet/ci
-LABEL org.opencontainers.image.description="Cockroach for GetAPet"
-
-CMD [ "start-single-node", "--insecure" ]
