@@ -1,4 +1,4 @@
-FROM nats:2.10.9-alpine
+FROM nats:2.10.10-alpine
 
 RUN apk add --no-cache bash
 
