@@ -1,4 +1,4 @@
-FROM cockroachdb/cockroach:v23.2.5
+FROM cockroachdb/cockroach:v24.1.0
 
 COPY docker/entrypoint.sh /getapet-entrypoint.sh
 
