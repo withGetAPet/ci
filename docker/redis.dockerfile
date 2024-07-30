@@ -1,4 +1,4 @@
-FROM redis:7.2.5-alpine
+FROM redis:7.4.0-alpine
 
 COPY docker/entrypoint.sh /getapet-entrypoint.sh
 
