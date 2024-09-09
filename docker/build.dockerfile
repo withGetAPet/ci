@@ -11,9 +11,9 @@ ENV CARGO_HOME=/usr/local/cargo \
     RUSTUP_HOME=/usr/local/rustup \
     PATH=/usr/local/cargo/bin:/usr/local/pnpm/bin:$PATH
 
-ARG RUST_VERSION=1.75.0
+ARG RUST_VERSION=1.81.0
 ARG NODE_MAJOR=20
-ARG WASM_BINDGEN_VERSION=116
+ARG WASM_BINDGEN_VERSION=119
 
 RUN --mount=type=bind,src=docker/build.sh,dst=/mount/build.sh \
     /mount/build.sh
